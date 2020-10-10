@@ -14,8 +14,8 @@ db_pass='261997'
 db = MySQLDatabase(db_name,host=host, user=db_user, passwd=db_pass)
 
 class Message(Model):
-    update_id = CharField()
-    chat_id = CharField()
+    update_id = IntegerField()
+    chat_id = IntegerField()
     first_name = CharField()
     last_name = CharField()
     text = CharField()

@@ -20,10 +20,13 @@ def get_detel_of_one_update_id(update_id):
     data = requests.get(url).text
     data = json.loads(data)
 
-    chat_id = data['result'][0]['message']['from']['id']
-    first_name = data['result'][0]['message']['from']['first_name']
-    last_name = data['result'][0]['message']['from']['last_name']
-    text =  data['result'][0]['message']['text']
+    chat_id,first_name,last_name,text = '','','',''
+
+    if len(data['result']):
+        chat_id = data['result'][0]['message']['from']['id']
+        first_name = data['result'][0]['message']['from']['first_name']
+        last_name = data['result'][0]['message']['from']['last_name']
+        text =  data['result'][0]['message']['text']
 
     return chat_id,first_name,last_name,text
 

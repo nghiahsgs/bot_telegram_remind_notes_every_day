@@ -7,26 +7,42 @@ while(True):
 
     list_message = Message.select()
     for message in list_message:
+        chat_id = message.chat_id
+        msg_res = message.text
         if not message.is_send_1:
             if current_time > message.review_time_1:
                 #send message nhac nho 1 ngay sau
-                pass
+                ky_ten = "Đây là tin nhắc nhắc bạn sau 1 ngày bạn tạo ghi chú !"
+                msg_res = "%s\n%s"%(msg_res,ky_ten)
+                send_message(chat_id,msg_res)
+        
         elif not message.is_send_2:
             if current_time > message.review_time_2:
                 #send message nhac nho 1 tuan sau
-                pass
+                ky_ten = "Đây là tin nhắc nhắc bạn sau 1 ngày bạn tạo ghi chú !"
+                msg_res = "%s\n%s"%(msg_res,ky_ten)
+                send_message(chat_id,msg_res)
+        
         elif not message.is_send_3:
             if current_time > message.review_time_3:
                 #send message nhac nho 2 tuan sau
-                pass
+                ky_ten = "Đây là tin nhắc nhắc bạn sau 2 tuần bạn tạo ghi chú !"
+                msg_res = "%s\n%s"%(msg_res,ky_ten)
+                send_message(chat_id,msg_res)
+        
         elif not message.is_send_4:
             if current_time > message.review_time_4:
                 #send message nhac nho 1 thang sau
-                pass
+                ky_ten = "Đây là tin nhắc nhắc bạn sau 1 tháng bạn tạo ghi chú !"
+                msg_res = "%s\n%s"%(msg_res,ky_ten)
+                send_message(chat_id,msg_res)
+        
         elif not message.is_send_5:
             if current_time > message.review_time_5:
                 #send message nhac nho 3 thang sau
-                pass
+                ky_ten = "Đây là tin nhắc nhắc bạn sau 3 tháng bạn tạo ghi chú !"
+                msg_res = "%s\n%s"%(msg_res,ky_ten)
+                send_message(chat_id,msg_res)
 
         else:
             pass

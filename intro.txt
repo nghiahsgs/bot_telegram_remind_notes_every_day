@@ -1,0 +1,5 @@
+Chào mừng bạn đến với bot nhắc nhở bạn học một cái gì đó.
+
+Như các bạn đã biết, việc ôn lại là rất quan trọng cho quá trình hình thành trí nhớ dài hạn (spaced repetition).
+
+Bot này ra đời để nhắc bạn học vào 1 ngày, 1 tuần, 2 tuần, 1 tháng, 3 tháng sau khi bạn học một cái gì đó, chúng tôi sẽ nhắc lại để bạn nhớ nhé =))
