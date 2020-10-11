@@ -13,6 +13,7 @@ update_id = Message.select()[-1].update_id +1
 while True:
     chat_id,first_name,last_name,text = get_detel_of_one_update_id(update_id)
     if not chat_id:
+        time.sleep(5)
         continue
 
     print(text)

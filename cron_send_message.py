@@ -4,7 +4,7 @@ from utils_db import *
 
 while(True):
     current_time = time.time()
-
+    print('check list message in db')
     list_message = Message.select()
     for message in list_message:
         chat_id = message.chat_id
@@ -47,4 +47,4 @@ while(True):
         else:
             pass
     
-    time.sleep(5*60) # 5 phut check 1 lan
+    time.sleep(30*60) # 30 phut check 1 lan
