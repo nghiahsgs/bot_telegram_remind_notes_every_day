@@ -15,6 +15,7 @@ while(True):
                 ky_ten = "Đây là tin nhắc nhắc bạn sau 1 ngày bạn tạo ghi chú !"
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
+                message.is_send_1 = 1
         
         elif not message.is_send_2:
             if current_time > message.review_time_2:
@@ -22,6 +23,7 @@ while(True):
                 ky_ten = "Đây là tin nhắc nhắc bạn sau 1 ngày bạn tạo ghi chú !"
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
+                message.is_send_2 = 1
         
         elif not message.is_send_3:
             if current_time > message.review_time_3:
@@ -29,6 +31,7 @@ while(True):
                 ky_ten = "Đây là tin nhắc nhắc bạn sau 2 tuần bạn tạo ghi chú !"
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
+                message.is_send_3 = 1
         
         elif not message.is_send_4:
             if current_time > message.review_time_4:
@@ -36,6 +39,7 @@ while(True):
                 ky_ten = "Đây là tin nhắc nhắc bạn sau 1 tháng bạn tạo ghi chú !"
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
+                message.is_send_4 = 1
         
         elif not message.is_send_5:
             if current_time > message.review_time_5:
@@ -43,6 +47,7 @@ while(True):
                 ky_ten = "Đây là tin nhắc nhắc bạn sau 3 tháng bạn tạo ghi chú !"
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
+                message.is_send_5 = 1
 
         else:
             pass
