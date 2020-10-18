@@ -16,6 +16,7 @@ while(True):
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
                 message.is_send_1 = 1
+                message.save()
         
         elif not message.is_send_2:
             if current_time > message.review_time_2:
@@ -24,6 +25,7 @@ while(True):
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
                 message.is_send_2 = 1
+                message.save()
         
         elif not message.is_send_3:
             if current_time > message.review_time_3:
@@ -32,6 +34,7 @@ while(True):
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
                 message.is_send_3 = 1
+                message.save()
         
         elif not message.is_send_4:
             if current_time > message.review_time_4:
@@ -40,6 +43,7 @@ while(True):
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
                 message.is_send_4 = 1
+                message.save()
         
         elif not message.is_send_5:
             if current_time > message.review_time_5:
@@ -48,6 +52,7 @@ while(True):
                 msg_res = "%s\n%s"%(msg_res,ky_ten)
                 send_message(chat_id,msg_res)
                 message.is_send_5 = 1
+                message.save()
 
         else:
             pass

@@ -4,11 +4,12 @@ from utils_db import *
 
 # try:
 #db rong thi no chay vao day
-# last_update_id = get_last_update_id()
-# update_id = last_update_id
+last_update_id = get_last_update_id()
+update_id = last_update_id
+print('update_id',update_id)
 # except:
 #     #co db thi no lay last row => update_id
-update_id = Message.select()[-1].update_id +1
+# update_id = Message.select()[-1].update_id +1
 
 while True:
     chat_id,first_name,last_name,text = get_detel_of_one_update_id(update_id)
@@ -49,3 +50,4 @@ while True:
 
     #increase update_id
     update_id = update_id+1
+    time.sleep(5)
