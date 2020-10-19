@@ -18,7 +18,7 @@ class Message(Model):
     chat_id = IntegerField()
     first_name = CharField()
     last_name = CharField()
-    text = CharField()
+    text = TextField()
 
     create_at = IntegerField()
     review_time_1 = IntegerField() # 1 ngay sau
